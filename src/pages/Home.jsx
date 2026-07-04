@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import FeaturedProducts from "../components/FeaturedProducts";
 import Categories from "../components/Categories";
 import WhyChoose from "../components/WhyChoose";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <FeaturedProducts />
       <Categories />
       <WhyChoose />
+      <Footer />
     </>
   );
 }

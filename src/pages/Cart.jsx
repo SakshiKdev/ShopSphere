@@ -2,7 +2,12 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 function Cart() {
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const {
+    cartItems,
+    removeFromCart,
+    increaseQuantity,
+    decreaseQuantity,
+  } = useContext(CartContext);
 
   const total = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
@@ -26,16 +31,39 @@ function Cart() {
                 alignItems: "center",
                 marginBottom: "20px",
                 border: "1px solid #ddd",
-                padding: "10px",
-                borderRadius: "10px"
+                padding: "15px",
+                borderRadius: "10px",
               }}
             >
-              <img src={item.image} alt={item.title} width="80" />
+              <img
+                src={item.image}
+                alt={item.title}
+                width="80"
+                height="80"
+              />
 
               <div style={{ flex: 1 }}>
                 <h3>{item.title}</h3>
                 <p>₹{item.price}</p>
-                <p>Qty: {item.quantity}</p>
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <button onClick={() => decreaseQuantity(item.id)}>
+                    -
+                  </button>
+
+                  <span>{item.quantity}</span>
+
+                  <button onClick={() => increaseQuantity(item.id)}>
+                    +
+                  </button>
+                </div>
               </div>
 
               <button onClick={() => removeFromCart(item.id)}>
@@ -44,7 +72,9 @@ function Cart() {
             </div>
           ))}
 
-          <h2>Total: ₹{total}</h2>
+          <hr />
+
+          <h2>Total: ₹{total.toFixed(2)}</h2>
         </>
       )}
     </div>
