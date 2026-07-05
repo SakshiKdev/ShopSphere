@@ -1,16 +1,102 @@
-# React + Vite
+# ShopSphere
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ShopSphere is a responsive e-commerce web application built with React. It enables users to browse products, search items, filter products by category, and manage a shopping cart with persistent local storage. Product data is fetched dynamically from the Fake Store API.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Website:** https://shop-sphere-git-main-sakshikdev1.vercel.app/
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Browse products from the Fake Store API
+* Search products by name
+* Filter products by category
+* Add products to the shopping cart
+* Increase and decrease product quantity
+* Remove products from the cart
+* Persist cart data using Local Storage
+* Responsive design for desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* React Router
+* React Context API
+* Local Storage
+* Fake Store API
+* Git & GitHub
+* Vercel
+
+## Project Structure
+
+```text
+src/
+├── components/
+├── context/
+├── pages/
+├── services/
+├── styles/
+├── App.jsx
+└── main.jsx
+```
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/SakshiKdev/ShopSphere.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd ShopSphere
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+## Future Improvements
+
+* Product Details page
+* User Authentication
+* Wishlist functionality
+* Product sorting
+* Checkout process
+* Order history
+
+## Author
+
+**Sakshi Khakhal**
+
+GitHub: https://github.com/SakshiKdev
+
+## Screenshots
+
+### Home Page
+
+| Hero Section                          | Featured Products                              |
+| ------------------------------------- | ---------------------------------------------- |
+| ![Hero Section](assets/home-hero.png) | ![Featured Products](assets/home-features.png) |
+
+| Categories                                | Footer                            |
+| ----------------------------------------- | --------------------------------- |
+| ![Categories](assets/home-categories.png) | ![Footer](assets/home-footer.png) |
+
+### Products Page
+
+![Products Page](assets/products.png)
+
